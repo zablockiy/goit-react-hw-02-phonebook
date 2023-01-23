@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { ItemContact } from '../ItemContact/ItemContact';
+
 import style from './listContact.module.css';
 
 export const ListContact = ({ contacts, onDeleteContact }) => {

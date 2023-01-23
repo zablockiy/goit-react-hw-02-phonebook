@@ -1,6 +1,7 @@
 import React from 'react';
-import { ReactComponent as IconBin } from '../../icons/bin.svg';
 import PropTypes from 'prop-types';
+import { ReactComponent as IconBin } from '../../icons/bin.svg';
+
 import style from './itemContact.module.css';
 
 export const ItemContact = ({ id, name, phone, del }) => {

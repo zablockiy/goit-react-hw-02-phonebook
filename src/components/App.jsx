@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
+import { nanoid } from 'nanoid';
+
 import { Form } from './Form/Form';
 import { ListContact } from './ListContact/ListContact';
 import { Filter } from './Filter/Filter';
-import { nanoid } from 'nanoid';
+
 import style from './App.module.css';
 
 

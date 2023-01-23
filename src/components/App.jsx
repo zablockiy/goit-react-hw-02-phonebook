@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { Form } from './Form/Form';
 import { ListContact } from './ListContact/ListContact';
-import {Filter} from './Filter/Filter';
+import { Filter } from './Filter/Filter';
 import { nanoid } from 'nanoid';
+import style from './App.module.css';
 
 
 export class App extends Component {
@@ -38,7 +39,7 @@ export class App extends Component {
 
   onVisibleContact = () => {
     const normalized = this.state.filter.toLowerCase();
-    return (this.state.contacts.filter(contact => contact.name.toLowerCase().includes(normalized)))
+    return (this.state.contacts.filter(contact => contact.name.toLowerCase().includes(normalized)));
   };
 
   onDeleteContact = (id) => {
@@ -51,10 +52,10 @@ export class App extends Component {
   render() {
     const visibleContacts = this.onVisibleContact();
     return (
-      <div>
-        <h1>Phonebook</h1>
+      <div className={style.wrapper}>
+        <h1 className={style.title}>Phonebook</h1>
         <Form onSubmit={this.onAddContact} />
-        <h2>Contacts</h2>
+        <h2 className={style.subtitle}>Contacts</h2>
         <Filter value={this.state.filter} onFilter={this.handleInputChange} />
         <ListContact contacts={visibleContacts} onDeleteContact={this.onDeleteContact} />
       </div>

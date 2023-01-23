@@ -45,4 +45,7 @@ button {
   background-color: transparent;
   cursor: pointer;
 }
+input {
+  width: 350px;
+}
 

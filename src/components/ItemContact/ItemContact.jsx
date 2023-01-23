@@ -6,7 +6,7 @@ export const ItemContact = ({ id, name, phone, del }) => {
   return (<>
     <li className={style.item}>
       <p className={style.title}>{name} : {phone}</p>
-      <button className={style.btn} onClick={() => del(id)}> Delete</button>
+      <button type="button" className={style.btn} onClick={() => del(id)}> Delete</button>
     </li>
   </>);
 };
